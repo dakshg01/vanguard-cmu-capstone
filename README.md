@@ -20,7 +20,7 @@ The repository excludes SEC ZIPs, the roughly 9 GB SQLite database, the roughly 
 
 ### Full database setup
 
-The database is distributed separately through the `nport-data-v1` GitHub Release once published. After cloning, restore it with Python's standard library:
+The database is available in the [N-PORT SQLite database v1 release](https://github.com/dakshg01/vanguard-cmu-capstone/releases/tag/nport-data-v1) as nine compressed parts (1.60 GB total; 8.95 GB restored). After cloning, restore it with Python's standard library:
 
 ```bash
 python database_release.py download
