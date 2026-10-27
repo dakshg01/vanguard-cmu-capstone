@@ -16,7 +16,23 @@ python -m pip install -r requirements_analysis.txt
 python -m jupyterlab Capstone_EDA.ipynb
 ```
 
-The repository excludes SEC ZIPs, the roughly 9 GB SQLite database, the roughly 105 MB per-holding classification Parquet audit, local dependencies, and scratch files. To rebuild the full extraction or per-holding audit, follow the original pipeline instructions below, download the archives into `data/zips/`, run `python run.py`, then `python analyze_sponsor.py`.
+The repository excludes SEC ZIPs, the roughly 9 GB SQLite database, the roughly 105 MB per-holding classification Parquet audit, local dependencies, and scratch files.
+
+### Full database setup
+
+The database is distributed separately through the `nport-data-v1` GitHub Release once published. After cloning, restore it with Python's standard library:
+
+```bash
+python database_release.py download
+python -m pip install -r requirements_analysis.txt
+python analyze_sponsor.py
+```
+
+The downloader restores `output/nport.sqlite`, verifies SHA-256 checksums and SQLite integrity, and refuses to overwrite an existing database. Allow roughly 12 GB of free disk space. For a private repository, install GitHub CLI (`gh`) and run `gh auth login` with a GitHub account granted repository access before downloading. No SEC archive downloads or extraction runs are needed with this snapshot.
+
+Maintainers: `python database_release.py package` creates a consistent SQLite snapshot and compressed parts under `.tmp/nport-data-v1/`. With authenticated GitHub CLI, `python database_release.py publish` uploads the parts and manifest to a draft release and publishes it only after uploads succeed.
+
+To rebuild the full extraction or per-holding audit from source instead, follow the original pipeline instructions below, download the archives into `data/zips/`, run `python run.py`, then `python analyze_sponsor.py`.
 
 Read the limitations before interpreting returns or risk: the universe is a supplied starting list, risk signs and class mappings require verification, and the notebook flags inconsistent class-return conventions. The sponsor email is included for project context; this repository is intended for private team collaboration.
 
