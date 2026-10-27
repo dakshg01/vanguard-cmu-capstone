@@ -1,0 +1,14 @@
+check,flagged_count
+numeric_or_date_parse_issues,0
+no_match_funds,0
+cik_mismatches,0
+accessions_in_multiple_archives,0
+amended_or_repeated_report_dates,20
+duplicate_class_month_latest,27
+duplicate_flow_month_latest,6
+balance_sheet_discrepancies,0
+snapshots_without_holdings,0
+missing_expected_tables,0
+ambiguous_debt_rows,0
+usd_sensitivity_magnitude_above_10_years,13
+unknown_metadata_types,0

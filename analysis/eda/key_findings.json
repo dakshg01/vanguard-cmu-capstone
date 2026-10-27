@@ -1,0 +1,23 @@
+{
+  "primary_funds": 49,
+  "primary_snapshots": 1333,
+  "complete_sector_pairs": 882,
+  "funds_with_complete_sector_pairs": 37,
+  "common_window": "2021-01-31 to 2025-12-31",
+  "common_window_funds": 45,
+  "common_window_classes": 263,
+  "funds_flagged_class_convention_review": 4,
+  "funds_in_screened_return_scatter": 41,
+  "spab_common_window_cagr_pct": -0.4109528392394757,
+  "vcobx_common_window_te_min_pct": 0.3437539100417599,
+  "vcobx_common_window_te_max_pct": 0.3751423925645531,
+  "vcobx_march2026_active_treasury_pp": -22.396532440626405,
+  "vcobx_march2026_active_signed_rate_years": 0.181546256830491,
+  "flow_allocation_spearman_rho": 0.22294975787233517,
+  "flow_allocation_fund_bootstrap_95": [
+    0.13016378543868018,
+    0.30305527897837564
+  ],
+  "excluded_flow_overlap_rows": 13,
+  "excluded_return_overlap_rows": 58
+}

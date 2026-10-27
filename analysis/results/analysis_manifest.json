@@ -1,0 +1,54 @@
+{
+  "script_sha256": "8a7568f14fbf0057e01d577fa853cd95d05b16a63fa6d50c8b85030f201fefd3",
+  "input_run_manifest_sha256": "201cca151c18c53a641e78e1c9b8689011c2007e6c173c73a968eea7970cb0ea",
+  "email_pdf_sha256": "a62e34493fec86dd84005b1879b1541c8b8c388f08b1b6d5e0f17bf44011a992",
+  "proxy_priority": [
+    "S000017334",
+    "S000004362",
+    "S000033156"
+  ],
+  "tracking_error_proxy": "S000017334",
+  "em_country_list": [
+    "AE",
+    "AR",
+    "BR",
+    "CL",
+    "CN",
+    "CO",
+    "CZ",
+    "EG",
+    "HU",
+    "ID",
+    "IN",
+    "MX",
+    "MY",
+    "PE",
+    "PH",
+    "PL",
+    "QA",
+    "RO",
+    "RU",
+    "SA",
+    "TH",
+    "TR",
+    "TW",
+    "UA",
+    "VE",
+    "VN",
+    "ZA"
+  ],
+  "elapsed_seconds": 113.43,
+  "csv_input_sha256": {
+    "fund_quarter.csv": "a91e2ff700face843928939f2c4d09b0db9203dd546b245e6966073f51ba9a29",
+    "risk_normalized_latest.csv": "a3af29a344457f61378e42f1c7f1991bcdcd17303cde0f5b377544ea3415347a",
+    "monthly_returns_latest.csv": "5d7b00d5a8d684bf531dbe6a934deb738fedf15cf29340a907134281f58c98c5"
+  },
+  "versions": {
+    "pandas": "2.3.3",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8",
+    "pyarrow": "22.0.0"
+  },
+  "assertions": "sector totals 100; active totals zero; benchmark month alignment; unique panel and class keys",
+  "excluded_ambiguous_snapshot_rows": 0
+}

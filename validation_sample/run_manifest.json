@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "created_utc": "2026-10-25T03:04:27.358170+00:00",
+  "universe_sha256": "742d43596c23f4b37a1f021bc9a9093702a1912cf5556d882a3a26fe1a8d88f2",
+  "funds": 59,
+  "archives": [
+    {
+      "archive_id": "f8e10bce83ac2251bcdb80111faa362b7c2b1ffb6581513e11559af0eac31390",
+      "filename": "2019q4_nport.zip",
+      "bytes": 240007320,
+      "loaded_at": "2026-10-25T02:59:41.287083+00:00"
+    },
+    {
+      "archive_id": "7626e33d21ab48169db412f7370190a9ba8d6a2c921718e59a445b333b23694c",
+      "filename": "2026q1_nport.zip",
+      "bytes": 463076167,
+      "loaded_at": "2026-10-25T03:01:35.139313+00:00"
+    }
+  ],
+  "availability_lag_days": 60,
+  "availability_overrides_sha256": null,
+  "quality": {
+    "status": "REVIEW_REQUIRED",
+    "checks": {
+      "numeric_or_date_parse_issues": 0,
+      "no_match_funds": 0,
+      "cik_mismatches": 0,
+      "accessions_in_multiple_archives": 0,
+      "amended_or_repeated_report_dates": 0,
+      "duplicate_class_month_latest": 0,
+      "duplicate_flow_month_latest": 0,
+      "balance_sheet_discrepancies": 0,
+      "snapshots_without_holdings": 0,
+      "missing_expected_tables": 0,
+      "ambiguous_debt_rows": 0,
+      "usd_sensitivity_magnitude_above_10_years": 1,
+      "unknown_metadata_types": 0
+    },
+    "missing_expected_tables": [],
+    "notes": [
+      "A coverage gap is not proof of missing SEC data; check fund inception, fiscal calendar, mergers and ZIP coverage.",
+      "Latest views are retrospective. For prediction use filings available by each decision date; default availability is an unverified lag proxy.",
+      "Weights are diagnostic, not forced to 100%; cash, liabilities, derivatives and unreported positions can prevent reconciliation.",
+      "Normalized risk fields retain the filed sign. Validate sign conventions before interpreting economic duration or comparing active signed risk across filers.",
+      "Review inventory for missing optional tables. A missing value is not zero.",
+      "Do not aggregate class returns or sum dollar flows after joining flows to multiple classes."
+    ]
+  }
+}

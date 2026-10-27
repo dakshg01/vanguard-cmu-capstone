@@ -1,0 +1,6860 @@
+{
+  "archives": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "filename",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "bytes",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "loaded_at",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "derivative_pnl_all": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_end",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "asset_category",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "instrument_kind",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_slot",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "realized_pnl_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "unrealized_change_usd",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "filings_all": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "cik",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_month",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "fiscal_year_end",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "submission_type",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "is_last_filing",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "total_assets",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "total_liabilities",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "net_assets",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "ingest_issues": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "table_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "column_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "raw_value",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "reason",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "inventory": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "table_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_rows",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "retained_rows",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "columns_json",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "monthly_flows_all": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_end",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_slot",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "sales_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "reinvestment_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "redemptions_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "net_external_flow_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "net_flow_including_reinvestment_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "nonderivative_realized_pnl_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "nonderivative_unrealized_change_usd",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "monthly_returns_all": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_end",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "return_row_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "class_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_slot",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "return_pct",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "return_decimal",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "raw_borrow_aggregate": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "BORROW_AGGREGATE_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "AMOUNT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "COLLATERAL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INVESTMENT_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_borrower": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "BORROWER_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "LEI",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "AGGREGATE_VALUE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_convertible_security_currency": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CONVERTIBLE_SECURITY_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CONVERSION_RATIO",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_debt_security": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "MATURITY_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "COUPON_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ANNUALIZED_RATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_DEFAULT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ARE_ANY_INTEREST_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_ANY_PORTION_INTEREST_PAID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_CONVTIBLE_MANDATORY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_CONVTIBLE_CONTINGENT",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_debt_security_ref_instrument": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DEBT_SECURITY_REF_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUE_TITLE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CUSIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISIN",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TICKER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_derivative_counterparty": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DERIVATIVE_COUNTERPARTY_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DERIVATIVE_COUNTERPARTY_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DERIVATIVE_COUNTERPARTY_LEI",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_desc_ref_index_basket": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INDEX_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INDEX_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NARRATIVE_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_desc_ref_index_component": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DESC_REF_INDEX_COMPONENT_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CUSIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISIN",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TICKER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DESC",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NOTIONAL_AMOUNT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "VALUE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_desc_ref_other": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DESC_REF_OTHER_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUE_TITLE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CUSIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISIN",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TICKER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_explanatory_note": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "EXPLANATORY_NOTE_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ITEM_NO",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "EXPLANATORY_NOTE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_floating_rate_reset_tenor": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RATE_RESET_TENOR_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RECEIPT_OR_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RESET_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RESET_DATE_UNIT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RATE_TENOR",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RATE_TENOR_UNIT",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_fund_reported_holding": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_LEI",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_TITLE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_CUSIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "BALANCE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNIT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_UNIT_DESC",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_VALUE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "EXCHANGE_RATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PERCENTAGE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PAYOFF_PROFILE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ASSET_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_ASSET",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_ISSUER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INVESTMENT_COUNTRY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_RESTRICTED_SECURITY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FAIR_VALUE_LEVEL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DERIVATIVE_CAT",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_fund_reported_info": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SERIES_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SERIES_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SERIES_LEI",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TOTAL_ASSETS",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TOTAL_LIABILITIES",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_ASSETS",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ASSETS_ATTRBT_TO_MISC_SECURITY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ASSETS_INVESTED",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "BORROWING_PAY_WITHIN_1YR",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CTRLD_COMPANIES_PAY_WITHIN_1YR",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_AFFILIA_PAY_WITHIN_1YR",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_PAY_WITHIN_1YR",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "BORROWING_PAY_AFTER_1YR",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CTRLD_COMPANIES_PAY_AFTER_1YR",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_AFFILIA_PAY_AFTER_1YR",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_PAY_AFTER_1YR",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DELAYED_DELIVERY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "STANDBY_COMMITMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "LIQUIDATION_PREFERENCE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CASH_NOT_RPTD_IN_C_OR_D",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CREDIT_SPREAD_3MON_INVEST",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CREDIT_SPREAD_1YR_INVEST",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CREDIT_SPREAD_5YR_INVEST",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CREDIT_SPREAD_10YR_INVEST",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CREDIT_SPREAD_30YR_INVEST",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CREDIT_SPREAD_3MON_NONINVEST",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CREDIT_SPREAD_1YR_NONINVEST",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CREDIT_SPREAD_5YR_NONINVEST",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CREDIT_SPREAD_10YR_NONINVEST",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CREDIT_SPREAD_30YR_NONINVEST",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_NON_CASH_COLLATERAL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_REALIZE_GAIN_NONDERIV_MON1",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_UNREALIZE_AP_NONDERIV_MON1",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_REALIZE_GAIN_NONDERIV_MON2",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_UNREALIZE_AP_NONDERIV_MON2",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_REALIZE_GAIN_NONDERIV_MON3",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_UNREALIZE_AP_NONDERIV_MON3",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SALES_FLOW_MON1",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REINVESTMENT_FLOW_MON1",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REDEMPTION_FLOW_MON1",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SALES_FLOW_MON2",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REINVESTMENT_FLOW_MON2",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REDEMPTION_FLOW_MON2",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SALES_FLOW_MON3",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REINVESTMENT_FLOW_MON3",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REDEMPTION_FLOW_MON3",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_fund_var_info": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DESIGNATED_INDEX_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DESIGNATED_INDEX_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_fut_fwd_nonforeigncur_contract": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PAYOFF_PROFILE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "EXPIRATION_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NOTIONAL_AMOUNT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNREALIZED_APPRECIATION",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_fwd_foreigncur_contract_swap": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_SOLD_AMOUNT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DESC_CURRENCY_SOLD",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_PURCHASED_AMOUNT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DESC_CURRENCY_PURCHASED",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SETTLEMENT_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNREALIZED_APPRECIATION",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_identifiers": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IDENTIFIERS_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IDENTIFIER_ISIN",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IDENTIFIER_TICKER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_IDENTIFIER_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_interest_rate_risk": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INTEREST_RATE_RISK_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_3MON_DV01",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_1YR_DV01",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_5YR_DV01",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_10YR_DV01",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_30YR_DV01",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_3MON_DV100",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_1YR_DV100",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_5YR_DV100",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_10YR_DV100",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_30YR_DV100",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_monthly_return_cat_instrument": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ASSET_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INSTRUMENT_KIND",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_REALIZED_GAIN_MON1",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_UNREALIZED_AP_MON1",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_REALIZED_GAIN_MON2",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_UNREALIZED_AP_MON2",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_REALIZED_GAIN_MON3",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_UNREALIZED_AP_MON3",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_monthly_total_return": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "MONTHLY_TOTAL_RETURN_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CLASS_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "MONTHLY_TOTAL_RETURN1",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "MONTHLY_TOTAL_RETURN2",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "MONTHLY_TOTAL_RETURN3",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_nonforeign_exchange_swap": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SWAP_FLAG",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TERMINATION_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UPFRONT_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PMNT_CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UPFRONT_RECEIPT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RCPT_CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NOTIONAL_AMOUNT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNREALIZED_APPRECIATION",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FIXED_OR_FLOATING_RECEIPT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FIXED_RATE_RECEIPT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FLOATING_RATE_INDEX_RECEIPT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FLOATING_RATE_SPREAD_RECEIPT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE_RECEIPT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "AMOUNT_RECEIPT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FIXED_OR_FLOATING_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FIXED_RATE_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FLOATING_RATE_INDEX_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FLOATING_RATE_SPREAD_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "AMOUNT_PAYMENT",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_other_deriv": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DESC",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TERMINATION_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNREALIZED_APPRECIATION",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_other_deriv_notional_amount": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DERIV_NOTIONAL_AMOUNT_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NOTIONAL_AMOUNT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_registrant": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CIK",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REGISTRANT_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FILE_NUM",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "LEI",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ADDRESS1",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ADDRESS2",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CITY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "STATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "COUNTRY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ZIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PHONE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_repurchase_agreement": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TRANSACTION_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_CLEARED",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CENTRAL_COUNTER_PARTY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_TRIPARTY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REPURCHASE_RATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "MATURITY_DATE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_repurchase_collateral": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REPURCHASE_COLLATERAL_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PRINCIPAL_AMOUNT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PRINCIPAL_CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "COLLATERAL_AMOUNT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "COLLATERAL_CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INVESTMENT_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_INTRUMENT_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_repurchase_counterparty": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REPURCHASE_COUNTERPARTY_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "LEI",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_securities_lending": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_CASH_COLLATERAL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CASH_COLLATERAL_AMOUNT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_NON_CASH_COLLATERAL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NON_CASH_COLLATERAL_VALUE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_LOAN_BY_FUND",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "LOAN_VALUE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_submission": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FILING_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FILE_NUM",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SUB_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REPORT_ENDING_PERIOD",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REPORT_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_LAST_FILING",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "raw_swaption_option_warnt_deriv": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PUT_OR_CALL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "WRITTEN_OR_PURCHASED",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SHARES_CNT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PRINCIPAL_AMOUNT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "EXERCISE_PRICE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "EXPIRATION_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNREALIZED_APPRECIATION",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "risk_all": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "risk_row_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "risk_type",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "currency",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "credit_bucket",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "tenor",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "shock_bp",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "value_change_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "source_column",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "schema_dictionary": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "table_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "column_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_type",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "typed_type",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "description",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "settings": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "key",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "value",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_borrow_aggregate": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "BORROW_AGGREGATE_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "COLLATERAL",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INVESTMENT_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_borrower": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "BORROWER_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "LEI",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "AGGREGATE_VALUE",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "t_convertible_security_currency": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CONVERTIBLE_SECURITY_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CONVERSION_RATIO",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_debt_security": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "MATURITY_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "COUPON_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ANNUALIZED_RATE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "IS_DEFAULT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ARE_ANY_INTEREST_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_ANY_PORTION_INTEREST_PAID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_CONVTIBLE_MANDATORY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_CONVTIBLE_CONTINGENT",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_debt_security_ref_instrument": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DEBT_SECURITY_REF_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUE_TITLE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CUSIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISIN",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TICKER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_derivative_counterparty": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DERIVATIVE_COUNTERPARTY_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DERIVATIVE_COUNTERPARTY_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DERIVATIVE_COUNTERPARTY_LEI",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_desc_ref_index_basket": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INDEX_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INDEX_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NARRATIVE_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_desc_ref_index_component": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DESC_REF_INDEX_COMPONENT_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CUSIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISIN",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TICKER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DESC",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NOTIONAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "VALUE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "ISSUER_CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_desc_ref_other": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DESC_REF_OTHER_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUE_TITLE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CUSIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISIN",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TICKER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_explanatory_note": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "EXPLANATORY_NOTE_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ITEM_NO",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "EXPLANATORY_NOTE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_floating_rate_reset_tenor": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RATE_RESET_TENOR_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RECEIPT_OR_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RESET_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RESET_DATE_UNIT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "RATE_TENOR",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RATE_TENOR_UNIT",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "t_fund_reported_holding": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_LEI",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_TITLE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_CUSIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "BALANCE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "UNIT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_UNIT_DESC",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_VALUE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "EXCHANGE_RATE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "PERCENTAGE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "PAYOFF_PROFILE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ASSET_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_ASSET",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_ISSUER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INVESTMENT_COUNTRY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_RESTRICTED_SECURITY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FAIR_VALUE_LEVEL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DERIVATIVE_CAT",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_fund_reported_info": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SERIES_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SERIES_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SERIES_LEI",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TOTAL_ASSETS",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "TOTAL_LIABILITIES",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_ASSETS",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "ASSETS_ATTRBT_TO_MISC_SECURITY",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "ASSETS_INVESTED",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "BORROWING_PAY_WITHIN_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CTRLD_COMPANIES_PAY_WITHIN_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "OTHER_AFFILIA_PAY_WITHIN_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "OTHER_PAY_WITHIN_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "BORROWING_PAY_AFTER_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CTRLD_COMPANIES_PAY_AFTER_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "OTHER_AFFILIA_PAY_AFTER_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "OTHER_PAY_AFTER_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "DELAYED_DELIVERY",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "STANDBY_COMMITMENT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "LIQUIDATION_PREFERENCE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CASH_NOT_RPTD_IN_C_OR_D",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_3MON_INVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_1YR_INVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_5YR_INVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_10YR_INVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_30YR_INVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_3MON_NONINVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_1YR_NONINVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_5YR_NONINVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_10YR_NONINVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_30YR_NONINVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "IS_NON_CASH_COLLATERAL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_REALIZE_GAIN_NONDERIV_MON1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_UNREALIZE_AP_NONDERIV_MON1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_REALIZE_GAIN_NONDERIV_MON2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_UNREALIZE_AP_NONDERIV_MON2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_REALIZE_GAIN_NONDERIV_MON3",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_UNREALIZE_AP_NONDERIV_MON3",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "SALES_FLOW_MON1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "REINVESTMENT_FLOW_MON1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "REDEMPTION_FLOW_MON1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "SALES_FLOW_MON2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "REINVESTMENT_FLOW_MON2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "REDEMPTION_FLOW_MON2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "SALES_FLOW_MON3",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "REINVESTMENT_FLOW_MON3",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "REDEMPTION_FLOW_MON3",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "t_fund_var_info": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DESIGNATED_INDEX_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DESIGNATED_INDEX_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_fut_fwd_nonforeigncur_contract": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PAYOFF_PROFILE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "EXPIRATION_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NOTIONAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNREALIZED_APPRECIATION",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "t_fwd_foreigncur_contract_swap": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_SOLD_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "DESC_CURRENCY_SOLD",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_PURCHASED_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "DESC_CURRENCY_PURCHASED",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SETTLEMENT_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNREALIZED_APPRECIATION",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "t_identifiers": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IDENTIFIERS_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IDENTIFIER_ISIN",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IDENTIFIER_TICKER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_IDENTIFIER_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_interest_rate_risk": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INTEREST_RATE_RISK_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_3MON_DV01",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_1YR_DV01",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_5YR_DV01",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_10YR_DV01",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_30YR_DV01",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_3MON_DV100",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_1YR_DV100",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_5YR_DV100",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_10YR_DV100",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_30YR_DV100",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "t_monthly_return_cat_instrument": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ASSET_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INSTRUMENT_KIND",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_REALIZED_GAIN_MON1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_UNREALIZED_AP_MON1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_REALIZED_GAIN_MON2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_UNREALIZED_AP_MON2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_REALIZED_GAIN_MON3",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_UNREALIZED_AP_MON3",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "t_monthly_total_return": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "MONTHLY_TOTAL_RETURN_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CLASS_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "MONTHLY_TOTAL_RETURN1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "MONTHLY_TOTAL_RETURN2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "MONTHLY_TOTAL_RETURN3",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "t_nonforeign_exchange_swap": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SWAP_FLAG",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TERMINATION_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UPFRONT_PAYMENT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "PMNT_CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UPFRONT_RECEIPT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "RCPT_CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NOTIONAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNREALIZED_APPRECIATION",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "FIXED_OR_FLOATING_RECEIPT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FIXED_RATE_RECEIPT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "FLOATING_RATE_INDEX_RECEIPT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FLOATING_RATE_SPREAD_RECEIPT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE_RECEIPT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "AMOUNT_RECEIPT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "FIXED_OR_FLOATING_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FIXED_RATE_PAYMENT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "FLOATING_RATE_INDEX_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FLOATING_RATE_SPREAD_PAYMENT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "AMOUNT_PAYMENT",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "t_other_deriv": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DESC",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TERMINATION_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNREALIZED_APPRECIATION",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "t_other_deriv_notional_amount": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DERIV_NOTIONAL_AMOUNT_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NOTIONAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_registrant": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CIK",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REGISTRANT_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FILE_NUM",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "LEI",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ADDRESS1",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ADDRESS2",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CITY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "STATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "COUNTRY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ZIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PHONE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_repurchase_agreement": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TRANSACTION_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_CLEARED",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CENTRAL_COUNTER_PARTY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_TRIPARTY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REPURCHASE_RATE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "MATURITY_DATE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_repurchase_collateral": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REPURCHASE_COLLATERAL_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PRINCIPAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "PRINCIPAL_CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "COLLATERAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "COLLATERAL_CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INVESTMENT_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_INTRUMENT_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_repurchase_counterparty": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REPURCHASE_COUNTERPARTY_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "LEI",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_securities_lending": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_CASH_COLLATERAL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CASH_COLLATERAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "IS_NON_CASH_COLLATERAL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NON_CASH_COLLATERAL_VALUE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "IS_LOAN_BY_FUND",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "LOAN_VALUE",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "t_submission": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FILING_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FILE_NUM",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SUB_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REPORT_ENDING_PERIOD",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REPORT_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_LAST_FILING",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "t_swaption_option_warnt_deriv": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PUT_OR_CALL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "WRITTEN_OR_PURCHASED",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SHARES_CNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "PRINCIPAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "EXERCISE_PRICE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "EXPIRATION_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNREALIZED_APPRECIATION",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "universe": {
+    "type": "table",
+    "columns": [
+      {
+        "name": "group",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "role",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "style",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "fund_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "manager",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "cik",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ncen_is_index",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ncen_is_etf",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "nport_var_reference_index",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "prospectus_benchmark_to_verify",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "note",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "borrow_aggregate_latest_raw": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "fund_series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "holdings_report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "BORROW_AGGREGATE_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "COLLATERAL",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INVESTMENT_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "borrower_latest_raw": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "fund_series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "holdings_report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "BORROWER_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "LEI",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "AGGREGATE_VALUE",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "convertible_security_currency_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CONVERTIBLE_SECURITY_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CONVERSION_RATIO",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "coverage": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "group",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "role",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "style",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "fund_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "manager",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "cik",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ncen_is_index",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ncen_is_etf",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "nport_var_reference_index",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "prospectus_benchmark_to_verify",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "note",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_count",
+        "sqlite_type": ""
+      },
+      {
+        "name": "first_report_date",
+        "sqlite_type": ""
+      },
+      {
+        "name": "last_report_date",
+        "sqlite_type": ""
+      },
+      {
+        "name": "first_filing_date",
+        "sqlite_type": ""
+      },
+      {
+        "name": "last_filing_date",
+        "sqlite_type": ""
+      },
+      {
+        "name": "coverage_status",
+        "sqlite_type": ""
+      }
+    ]
+  },
+  "coverage_gaps": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "previous_report_date",
+        "sqlite_type": ""
+      },
+      {
+        "name": "gap_days",
+        "sqlite_type": ""
+      }
+    ]
+  },
+  "debt_security_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "MATURITY_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "COUPON_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ANNUALIZED_RATE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "IS_DEFAULT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ARE_ANY_INTEREST_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_ANY_PORTION_INTEREST_PAID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_CONVTIBLE_MANDATORY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_CONVTIBLE_CONTINGENT",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "debt_security_ref_instrument_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DEBT_SECURITY_REF_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUE_TITLE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CUSIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISIN",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TICKER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "debt_unique": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "MATURITY_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "COUPON_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ANNUALIZED_RATE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "IS_DEFAULT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ARE_ANY_INTEREST_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_ANY_PORTION_INTEREST_PAID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_CONVTIBLE_MANDATORY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_CONVTIBLE_CONTINGENT",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "derivative_counterparty_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DERIVATIVE_COUNTERPARTY_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DERIVATIVE_COUNTERPARTY_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DERIVATIVE_COUNTERPARTY_LEI",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "derivative_pnl": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_end",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "asset_category",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "instrument_kind",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_slot",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "realized_pnl_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "unrealized_change_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "derivative_pnl_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_end",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "asset_category",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "instrument_kind",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_slot",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "realized_pnl_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "unrealized_change_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "desc_ref_index_basket_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INDEX_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INDEX_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NARRATIVE_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "desc_ref_index_component_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DESC_REF_INDEX_COMPONENT_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CUSIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISIN",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TICKER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DESC",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NOTIONAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "VALUE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "ISSUER_CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "desc_ref_other_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DESC_REF_OTHER_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUE_TITLE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CUSIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISIN",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TICKER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "explanatory_note_latest_raw": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "fund_series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "holdings_report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "EXPLANATORY_NOTE_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ITEM_NO",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "EXPLANATORY_NOTE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "filings": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "cik",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_month",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "fiscal_year_end",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "submission_type",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "is_last_filing",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "total_assets",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "total_liabilities",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "net_assets",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "archive_copy_rank",
+        "sqlite_type": ""
+      }
+    ]
+  },
+  "filings_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "cik",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_month",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "fiscal_year_end",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "submission_type",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "is_last_filing",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "total_assets",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "total_liabilities",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "net_assets",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "archive_copy_rank",
+        "sqlite_type": ""
+      },
+      {
+        "name": "amendment_rank",
+        "sqlite_type": ""
+      }
+    ]
+  },
+  "floating_rate_reset_tenor_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RATE_RESET_TENOR_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RECEIPT_OR_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RESET_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RESET_DATE_UNIT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "RATE_TENOR",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "RATE_TENOR_UNIT",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "fund_quarter": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "cik",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_month",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "fiscal_year_end",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "submission_type",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "is_last_filing",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "total_assets",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "total_liabilities",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "net_assets",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "archive_copy_rank",
+        "sqlite_type": ""
+      },
+      {
+        "name": "amendment_rank",
+        "sqlite_type": ""
+      },
+      {
+        "name": "fund_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "universe_group",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "role",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "style",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "manager",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "delayed_delivery_payables_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "cash_not_in_holdings_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "filing_lag_days",
+        "sqlite_type": ""
+      },
+      {
+        "name": "usd_rate_sensitivity_years_signed",
+        "sqlite_type": ""
+      },
+      {
+        "name": "ig_spread_sensitivity_years_signed",
+        "sqlite_type": ""
+      },
+      {
+        "name": "hy_spread_sensitivity_years_signed",
+        "sqlite_type": ""
+      }
+    ]
+  },
+  "fund_reported_info_latest_raw": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "fund_series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "holdings_report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SERIES_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SERIES_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SERIES_LEI",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TOTAL_ASSETS",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "TOTAL_LIABILITIES",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_ASSETS",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "ASSETS_ATTRBT_TO_MISC_SECURITY",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "ASSETS_INVESTED",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "BORROWING_PAY_WITHIN_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CTRLD_COMPANIES_PAY_WITHIN_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "OTHER_AFFILIA_PAY_WITHIN_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "OTHER_PAY_WITHIN_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "BORROWING_PAY_AFTER_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CTRLD_COMPANIES_PAY_AFTER_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "OTHER_AFFILIA_PAY_AFTER_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "OTHER_PAY_AFTER_1YR",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "DELAYED_DELIVERY",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "STANDBY_COMMITMENT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "LIQUIDATION_PREFERENCE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CASH_NOT_RPTD_IN_C_OR_D",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_3MON_INVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_1YR_INVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_5YR_INVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_10YR_INVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_30YR_INVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_3MON_NONINVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_1YR_NONINVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_5YR_NONINVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_10YR_NONINVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CREDIT_SPREAD_30YR_NONINVEST",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "IS_NON_CASH_COLLATERAL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_REALIZE_GAIN_NONDERIV_MON1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_UNREALIZE_AP_NONDERIV_MON1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_REALIZE_GAIN_NONDERIV_MON2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_UNREALIZE_AP_NONDERIV_MON2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_REALIZE_GAIN_NONDERIV_MON3",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_UNREALIZE_AP_NONDERIV_MON3",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "SALES_FLOW_MON1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "REINVESTMENT_FLOW_MON1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "REDEMPTION_FLOW_MON1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "SALES_FLOW_MON2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "REINVESTMENT_FLOW_MON2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "REDEMPTION_FLOW_MON2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "SALES_FLOW_MON3",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "REINVESTMENT_FLOW_MON3",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "REDEMPTION_FLOW_MON3",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "fund_snapshots": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "cik",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_month",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "fiscal_year_end",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "submission_type",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "is_last_filing",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "total_assets",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "total_liabilities",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "net_assets",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "archive_copy_rank",
+        "sqlite_type": ""
+      },
+      {
+        "name": "amendment_rank",
+        "sqlite_type": ""
+      },
+      {
+        "name": "fund_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "universe_group",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "role",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "style",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "manager",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "fund_var_info_latest_raw": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "fund_series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "holdings_report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DESIGNATED_INDEX_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DESIGNATED_INDEX_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "fut_fwd_nonforeigncur_contract_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PAYOFF_PROFILE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "EXPIRATION_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NOTIONAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNREALIZED_APPRECIATION",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "fwd_foreigncur_contract_swap_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_SOLD_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "DESC_CURRENCY_SOLD",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_PURCHASED_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "DESC_CURRENCY_PURCHASED",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SETTLEMENT_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNREALIZED_APPRECIATION",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "holdings_all": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_month",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_LEI",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_TITLE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_CUSIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "BALANCE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "UNIT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_UNIT_DESC",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_VALUE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "EXCHANGE_RATE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "PERCENTAGE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "PAYOFF_PROFILE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ASSET_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_ASSET",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_ISSUER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INVESTMENT_COUNTRY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_RESTRICTED_SECURITY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FAIR_VALUE_LEVEL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DERIVATIVE_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "weight_fraction",
+        "sqlite_type": ""
+      }
+    ]
+  },
+  "holdings_checks": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "holding_count",
+        "sqlite_type": ""
+      },
+      {
+        "name": "reported_weight_sum_pct",
+        "sqlite_type": ""
+      },
+      {
+        "name": "missing_cusip_count",
+        "sqlite_type": ""
+      },
+      {
+        "name": "missing_weight_count",
+        "sqlite_type": ""
+      }
+    ]
+  },
+  "holdings_enriched_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_month",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_LEI",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_TITLE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_CUSIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "BALANCE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "UNIT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_UNIT_DESC",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_VALUE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "EXCHANGE_RATE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "PERCENTAGE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "PAYOFF_PROFILE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ASSET_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_ASSET",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_ISSUER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INVESTMENT_COUNTRY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_RESTRICTED_SECURITY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FAIR_VALUE_LEVEL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DERIVATIVE_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "weight_fraction",
+        "sqlite_type": ""
+      },
+      {
+        "name": "is_reported_derivative",
+        "sqlite_type": ""
+      },
+      {
+        "name": "MATURITY_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "COUPON_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "coupon_pct",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "coupon_decimal",
+        "sqlite_type": ""
+      },
+      {
+        "name": "IS_DEFAULT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "years_to_maturity",
+        "sqlite_type": ""
+      }
+    ]
+  },
+  "holdings_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_month",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_LEI",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_TITLE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_CUSIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "BALANCE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "UNIT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_UNIT_DESC",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_VALUE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "EXCHANGE_RATE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "PERCENTAGE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "PAYOFF_PROFILE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ASSET_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_ASSET",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ISSUER_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_ISSUER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INVESTMENT_COUNTRY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_RESTRICTED_SECURITY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FAIR_VALUE_LEVEL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "DERIVATIVE_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "weight_fraction",
+        "sqlite_type": ""
+      }
+    ]
+  },
+  "identifiers_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IDENTIFIERS_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IDENTIFIER_ISIN",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IDENTIFIER_TICKER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_IDENTIFIER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_IDENTIFIER_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "interest_rate_risk_latest_raw": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "fund_series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "holdings_report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INTEREST_RATE_RISK_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_3MON_DV01",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_1YR_DV01",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_5YR_DV01",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_10YR_DV01",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_30YR_DV01",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_3MON_DV100",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_1YR_DV100",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_5YR_DV100",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_10YR_DV100",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "INTRST_RATE_CHANGE_30YR_DV100",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "monthly_flows": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_end",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_slot",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "sales_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "reinvestment_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "redemptions_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "net_external_flow_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "net_flow_including_reinvestment_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "nonderivative_realized_pnl_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "nonderivative_unrealized_change_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "monthly_flows_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_end",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_slot",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "sales_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "reinvestment_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "redemptions_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "net_external_flow_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "net_flow_including_reinvestment_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "nonderivative_realized_pnl_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "nonderivative_unrealized_change_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "monthly_return_cat_instrument_latest_raw": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "fund_series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "holdings_report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ASSET_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INSTRUMENT_KIND",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NET_REALIZED_GAIN_MON1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_UNREALIZED_AP_MON1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_REALIZED_GAIN_MON2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_UNREALIZED_AP_MON2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_REALIZED_GAIN_MON3",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "NET_UNREALIZED_AP_MON3",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "monthly_returns": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_end",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "return_row_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "class_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_slot",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "return_pct",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "return_decimal",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "monthly_returns_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_end",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "return_row_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "class_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "month_slot",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "return_pct",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "return_decimal",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "monthly_total_return_latest_raw": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "fund_series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "holdings_report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "MONTHLY_TOTAL_RETURN_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CLASS_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "MONTHLY_TOTAL_RETURN1",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "MONTHLY_TOTAL_RETURN2",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "MONTHLY_TOTAL_RETURN3",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "nonforeign_exchange_swap_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SWAP_FLAG",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TERMINATION_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UPFRONT_PAYMENT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "PMNT_CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UPFRONT_RECEIPT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "RCPT_CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NOTIONAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNREALIZED_APPRECIATION",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "FIXED_OR_FLOATING_RECEIPT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FIXED_RATE_RECEIPT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "FLOATING_RATE_INDEX_RECEIPT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FLOATING_RATE_SPREAD_RECEIPT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE_RECEIPT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "AMOUNT_RECEIPT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "FIXED_OR_FLOATING_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FIXED_RATE_PAYMENT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "FLOATING_RATE_INDEX_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FLOATING_RATE_SPREAD_PAYMENT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE_PAYMENT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "AMOUNT_PAYMENT",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "other_deriv_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DESC",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TERMINATION_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNREALIZED_APPRECIATION",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "other_deriv_notional_amount_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_DERIV_NOTIONAL_AMOUNT_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NOTIONAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "registrant_latest_raw": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "fund_series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "holdings_report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CIK",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REGISTRANT_NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FILE_NUM",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "LEI",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ADDRESS1",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ADDRESS2",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CITY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "STATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "COUNTRY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ZIP",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PHONE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "repurchase_agreement_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "TRANSACTION_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_CLEARED",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CENTRAL_COUNTER_PARTY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_TRIPARTY",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REPURCHASE_RATE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "MATURITY_DATE",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "repurchase_collateral_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REPURCHASE_COLLATERAL_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PRINCIPAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "PRINCIPAL_CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "COLLATERAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "COLLATERAL_CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "INVESTMENT_CAT",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "OTHER_INTRUMENT_DESC",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "repurchase_counterparty_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REPURCHASE_COUNTERPARTY_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NAME",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "LEI",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "risk": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "risk_row_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "risk_type",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "currency",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "credit_bucket",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "tenor",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "shock_bp",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "value_change_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "source_column",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "risk_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "risk_row_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "risk_type",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "currency",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "credit_bucket",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "tenor",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "shock_bp",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "value_change_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "source_column",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "risk_normalized_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "risk_row_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "risk_type",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "currency",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "credit_bucket",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "tenor",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "shock_bp",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "value_change_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "source_column",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "net_assets",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "reported_sensitivity_years",
+        "sqlite_type": ""
+      }
+    ]
+  },
+  "risk_review_flags": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "cik",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_month",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "fiscal_year_end",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "filing_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "submission_type",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "is_last_filing",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "available_date_assumed",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "availability_basis",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "total_assets",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "total_liabilities",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "net_assets",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "archive_copy_rank",
+        "sqlite_type": ""
+      },
+      {
+        "name": "amendment_rank",
+        "sqlite_type": ""
+      },
+      {
+        "name": "fund_name",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "universe_group",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "role",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "style",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "manager",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "delayed_delivery_payables_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "cash_not_in_holdings_usd",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "filing_lag_days",
+        "sqlite_type": ""
+      },
+      {
+        "name": "usd_rate_sensitivity_years_signed",
+        "sqlite_type": ""
+      },
+      {
+        "name": "ig_spread_sensitivity_years_signed",
+        "sqlite_type": ""
+      },
+      {
+        "name": "hy_spread_sensitivity_years_signed",
+        "sqlite_type": ""
+      },
+      {
+        "name": "risk_review",
+        "sqlite_type": ""
+      }
+    ]
+  },
+  "risk_totals_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "accession_number",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "risk_type",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "currency",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "credit_bucket",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "shock_bp",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "tenor_rows",
+        "sqlite_type": ""
+      },
+      {
+        "name": "distinct_tenors",
+        "sqlite_type": ""
+      },
+      {
+        "name": "nonmissing_tenors",
+        "sqlite_type": ""
+      },
+      {
+        "name": "total_value_change_usd",
+        "sqlite_type": ""
+      },
+      {
+        "name": "total_reported_sensitivity_years",
+        "sqlite_type": ""
+      }
+    ]
+  },
+  "securities_lending_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_CASH_COLLATERAL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "CASH_COLLATERAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "IS_NON_CASH_COLLATERAL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "NON_CASH_COLLATERAL_VALUE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "IS_LOAN_BY_FUND",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "LOAN_VALUE",
+        "sqlite_type": "REAL"
+      }
+    ]
+  },
+  "submission_latest_raw": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "fund_series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "holdings_report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FILING_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "FILE_NUM",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SUB_TYPE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REPORT_ENDING_PERIOD",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "REPORT_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "IS_LAST_FILING",
+        "sqlite_type": "TEXT"
+      }
+    ]
+  },
+  "swaption_option_warnt_deriv_latest": {
+    "type": "view",
+    "columns": [
+      {
+        "name": "series_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "report_date",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "ACCESSION_NUMBER",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_archive_id",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "source_row",
+        "sqlite_type": "INTEGER"
+      },
+      {
+        "name": "HOLDING_ID",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "PUT_OR_CALL",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "WRITTEN_OR_PURCHASED",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "SHARES_CNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "PRINCIPAL_AMOUNT",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "CURRENCY_CODE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "EXERCISE_PRICE",
+        "sqlite_type": "REAL"
+      },
+      {
+        "name": "EXPIRATION_DATE",
+        "sqlite_type": "TEXT"
+      },
+      {
+        "name": "UNREALIZED_APPRECIATION",
+        "sqlite_type": "REAL"
+      }
+    ]
+  }
+}

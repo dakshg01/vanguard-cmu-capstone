@@ -1,0 +1,18 @@
+[
+    {
+        "Path":  "C:\\Users\\gupta\\DakshPython\\mini6\\capstone\\output\\csv\\risk_normalized_latest.csv",
+        "Hash":  "A3AF29A344457F61378E42F1C7F1991BCDCD17303CDE0F5B377544EA3415347A"
+    },
+    {
+        "Path":  "C:\\Users\\gupta\\DakshPython\\mini6\\capstone\\output\\csv\\monthly_returns_latest.csv",
+        "Hash":  "5D7B00D5A8D684BF531DBE6A934DEB738FEDF15CF29340A907134281F58C98C5"
+    },
+    {
+        "Path":  "C:\\Users\\gupta\\DakshPython\\mini6\\capstone\\output\\csv\\monthly_flows_latest.csv",
+        "Hash":  "09BBD77E990C7973CB40539E9EC05D25280801957E1373E463FC80A4F4F3D9BD"
+    },
+    {
+        "Path":  "C:\\Users\\gupta\\DakshPython\\mini6\\capstone\\output\\csv\\fund_quarter.csv",
+        "Hash":  "A91E2FF700FACE843928939F2C4D09B0DB9203DD546B245E6966073F51BA9A29"
+    }
+]

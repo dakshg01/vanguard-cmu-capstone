@@ -1,0 +1,9 @@
+Sponsor factor,Delivered status,Field / output
+1. US duration,Reported signed active sensitivity; economic sign unverified,active_usd_rate_signed_years
+2. US curve,Five signed tenors and long-minus-short diagnostic,rate_tenor_positions.csv
+3. Non-US rates / FX,Reported currency rate risk and holdings currency mix; net FX unavailable,non_us_rate_sensitivities.csv
+4. MBS,Active agency and non-agency weights; TBA candidates separately flagged,active_sector_pp__Agency MBS
+5. TIPS / breakevens / swap spreads,Description-identified TIPS and one-case USD IRS approximation only,active_sector_pp__TIPS (description identified)
+6. Credit risk,Filed IG/HY signed sensitivity differences for audit; cross-family comparability unverified,active_ig_spread_signed_years
+7. Credit quality,Not available without security ratings,not computed
+8. Rates / credit hedging,Not available without independent factor returns and verified reference classes,not computed

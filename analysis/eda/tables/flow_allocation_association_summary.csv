@@ -1,0 +1,2 @@
+intervals,funds,spearman_rho,fund_bootstrap_95_low,fund_bootstrap_95_high,bootstrap_draws,excluded_above_100pct_flow
+1102,48,0.22294975787233517,0.13016378543868018,0.30305527897837564,500,3

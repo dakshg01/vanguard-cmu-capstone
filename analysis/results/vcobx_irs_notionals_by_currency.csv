@@ -1,0 +1,7 @@
+CURRENCY_CODE,direction,contracts,gross_notional_in_currency_units
+CAD,Receive fixed,2,248722470.0
+EUR,Receive fixed,3,96021606.0
+HUF,Receive fixed,1,5437740000.0
+JPY,Pay fixed,1,25231400000.0
+USD,Pay fixed,26,1507430000.0
+USD,Receive fixed,23,453730000.0

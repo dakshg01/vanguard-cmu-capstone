@@ -1,0 +1,9 @@
+* text=auto eol=lf
+# Preserve exact source/artifact bytes used by reproducibility hashes.
+*.csv -text
+*.json -text
+*.pdf -text
+*.png -text
+*.jpg -text
+*.zip -text
+*.parquet -text

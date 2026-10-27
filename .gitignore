@@ -1,0 +1,30 @@
+# Large inputs and reproducible database artifacts
+data/zips/*.zip
+*.sqlite
+*.sqlite-*
+*.db
+analysis/results/holdings_classification_audit.parquet
+
+# Local dependencies, caches, temporary files, and rendered email scratch pages
+.deps/
+.tmp/
+tmp/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+analysis/source_pages/
+
+# Machine/account configuration and credentials
+.aws/
+.codex/
+.agents/
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+.DS_Store
+Thumbs.db

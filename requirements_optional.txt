@@ -1,0 +1,4 @@
+# Only needed for the Jupyter notebook, research helpers, and optional Parquet export.
+pandas>=2.0,<4
+jupyterlab>=4,<5
+pyarrow>=15

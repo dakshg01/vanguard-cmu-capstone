@@ -1,0 +1,14 @@
+{
+  "notebook_sha256": "de6db80468836c39018adbffbe55bc12f2b7a4d53ccf98c5f8034afbd2ad0be2",
+  "code_cells_executed": 15,
+  "errors": 0,
+  "embedded_figures": 11,
+  "common_window_classes": 263,
+  "common_window_funds": 45,
+  "review_flagged_funds": 4,
+  "source_csv_hashes_unchanged": true,
+  "exported_table_files": 17,
+  "eda_requires_sqlite": false,
+  "csv_only_team_checkout_executed_cells": 15,
+  "csv_only_team_checkout_errors": 0
+}

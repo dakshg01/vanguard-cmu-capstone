@@ -1,0 +1,205 @@
+{
+  "version": "1.0.0",
+  "created_utc": "2026-10-26T05:50:48.176158+00:00",
+  "universe_sha256": "742d43596c23f4b37a1f021bc9a9093702a1912cf5556d882a3a26fe1a8d88f2",
+  "funds": 59,
+  "archives": [
+    {
+      "archive_id": "f8e10bce83ac2251bcdb80111faa362b7c2b1ffb6581513e11559af0eac31390",
+      "filename": "2019q4_nport.zip",
+      "bytes": 240007320,
+      "loaded_at": "2026-10-26T05:06:48.438226+00:00"
+    },
+    {
+      "archive_id": "4763fe2a71c67bd95934d8a961b88d29d0726e8ee7d1d0f57de9bddb2b087dbd",
+      "filename": "2020q1_nport.zip",
+      "bytes": 340462382,
+      "loaded_at": "2026-10-26T05:07:59.178954+00:00"
+    },
+    {
+      "archive_id": "c0d02e0fc87a73387ff8390045639deac4ec84d4356eca1484a36637cbabaccb",
+      "filename": "2020q2_nport.zip",
+      "bytes": 332888140,
+      "loaded_at": "2026-10-26T05:08:49.651721+00:00"
+    },
+    {
+      "archive_id": "e048462a9cedc857b56075b0a7db47f1b7f98cc1752017b3220b86e43431283b",
+      "filename": "2020q3_nport.zip",
+      "bytes": 371068711,
+      "loaded_at": "2026-10-26T05:09:49.126894+00:00"
+    },
+    {
+      "archive_id": "37eac516e1f8af19ef87718eaa100a9a05905a33f8c11ec7c38ab5fc784b02e1",
+      "filename": "2020q4_nport.zip",
+      "bytes": 359205250,
+      "loaded_at": "2026-10-26T05:10:48.393093+00:00"
+    },
+    {
+      "archive_id": "b88674c295ca8b1f25d7396d6e779dc66428bc8ba8d7d435b28e05efb9e1f0b8",
+      "filename": "2021q1_nport.zip",
+      "bytes": 342516796,
+      "loaded_at": "2026-10-26T05:11:41.435636+00:00"
+    },
+    {
+      "archive_id": "1a84e50fa13053ea2a66dd82726b741d818248a3b6722a5a8e72dd1739d37289",
+      "filename": "2021q2_nport.zip",
+      "bytes": 358497137,
+      "loaded_at": "2026-10-26T05:12:39.736962+00:00"
+    },
+    {
+      "archive_id": "57900ea865f16f5fc717b0185ba7a73a0d0fb84a00441f9ccebdde0437c937a1",
+      "filename": "2021q3_nport.zip",
+      "bytes": 380417219,
+      "loaded_at": "2026-10-26T05:13:37.627016+00:00"
+    },
+    {
+      "archive_id": "94169bcf86b40095a9590599291b40ee67ceb56d1e2cc88a085e1d018430917d",
+      "filename": "2021q4_nport.zip",
+      "bytes": 374616598,
+      "loaded_at": "2026-10-26T05:14:37.202947+00:00"
+    },
+    {
+      "archive_id": "9d28cad347e433f921e9154efd77c4f3755634d7c105a1dc0b9c3b72be69872e",
+      "filename": "2022q1_nport.zip",
+      "bytes": 482447144,
+      "loaded_at": "2026-10-26T05:15:48.373974+00:00"
+    },
+    {
+      "archive_id": "228dc1a21e3e5813d2cad2cb776a25b1a9580da1129d060b6ed1ec7bdb7f8250",
+      "filename": "2022q2_nport.zip",
+      "bytes": 432741571,
+      "loaded_at": "2026-10-26T05:16:53.198013+00:00"
+    },
+    {
+      "archive_id": "6494465b63ef3450437019794d0d15bfae72c6752e4fc589b6f71953d9203f1b",
+      "filename": "2022q3_nport.zip",
+      "bytes": 724385184,
+      "loaded_at": "2026-10-26T05:18:42.116990+00:00"
+    },
+    {
+      "archive_id": "add0a14dc5f7a753a897c3daeea674cbbf75c8167670cdeaa3d647068db8416d",
+      "filename": "2022q4_nport.zip",
+      "bytes": 422189888,
+      "loaded_at": "2026-10-26T05:19:48.047982+00:00"
+    },
+    {
+      "archive_id": "3c970127ca2315ac35ec7e6fc2f8c1eed0dadb64a8bfb760dc6f0609d540ca87",
+      "filename": "2023q1_nport.zip",
+      "bytes": 480447687,
+      "loaded_at": "2026-10-26T05:21:01.134851+00:00"
+    },
+    {
+      "archive_id": "29cee81fdbe41ac9ebde1dcf76c6a7088e5c9b3e345829ab9f5773574946ef00",
+      "filename": "2023q2_nport.zip",
+      "bytes": 427953767,
+      "loaded_at": "2026-10-26T05:22:06.654743+00:00"
+    },
+    {
+      "archive_id": "d27b2645f282b1230ca998a2fe759eca3547542f0e25c568046509152a5ad21e",
+      "filename": "2023q3_nport.zip",
+      "bytes": 457209257,
+      "loaded_at": "2026-10-26T05:23:17.563128+00:00"
+    },
+    {
+      "archive_id": "238ca64537a7b6febcb7adbc444645db7a847cdf1bd7579eb8372f2ae29f1c55",
+      "filename": "2023q4_nport.zip",
+      "bytes": 420320703,
+      "loaded_at": "2026-10-26T05:24:24.355121+00:00"
+    },
+    {
+      "archive_id": "7f391a05a71cec3fde5ce382e8ca8af9b11606ae85c465f99d98846e2d695254",
+      "filename": "2024q1_nport.zip",
+      "bytes": 446989787,
+      "loaded_at": "2026-10-26T05:25:33.859664+00:00"
+    },
+    {
+      "archive_id": "960ee7685ee0da352b0e59c1e34ce7ec383a04d90f7d1a877c891b2b31aa4332",
+      "filename": "2024q2_nport.zip",
+      "bytes": 506739574,
+      "loaded_at": "2026-10-26T05:26:52.389386+00:00"
+    },
+    {
+      "archive_id": "e2c4d7e7cbf346338476e65231918917d327776f348065b3329d55274ec35f74",
+      "filename": "2024q3_nport.zip",
+      "bytes": 478076657,
+      "loaded_at": "2026-10-26T05:28:09.324507+00:00"
+    },
+    {
+      "archive_id": "449963cd187fc40774dd947c6302863c9d958369f747b196d957eab999501465",
+      "filename": "2024q4_nport.zip",
+      "bytes": 406008057,
+      "loaded_at": "2026-10-26T05:29:15.781890+00:00"
+    },
+    {
+      "archive_id": "7593dc6f6eaed347ba21bf0e95bb1c1fb14701de98bdf09410a1e975871d2f1b",
+      "filename": "2025q1_nport.zip",
+      "bytes": 462120659,
+      "loaded_at": "2026-10-26T05:30:27.316819+00:00"
+    },
+    {
+      "archive_id": "08b90e310da506ae46e8a5b276022861808d61d56ce434ce310f52f31f608ca7",
+      "filename": "2025q2_nport.zip",
+      "bytes": 435156377,
+      "loaded_at": "2026-10-26T05:31:36.875377+00:00"
+    },
+    {
+      "archive_id": "4cc5c2431bf8997ef0af1cb7b69568255a1d6a1840e41499d9ffd1fc42e030f6",
+      "filename": "2025q3_nport.zip",
+      "bytes": 468940747,
+      "loaded_at": "2026-10-26T05:32:51.608590+00:00"
+    },
+    {
+      "archive_id": "4ebb169e6cc0745b4cc65de4e83ea4916c7ad39146c383007e078b6223af8dea",
+      "filename": "2025q4_nport.zip",
+      "bytes": 417802295,
+      "loaded_at": "2026-10-26T05:33:59.420124+00:00"
+    },
+    {
+      "archive_id": "7626e33d21ab48169db412f7370190a9ba8d6a2c921718e59a445b333b23694c",
+      "filename": "2026q1_nport.zip",
+      "bytes": 463076167,
+      "loaded_at": "2026-10-26T05:35:12.207733+00:00"
+    },
+    {
+      "archive_id": "077cc836a978a593b29012219395fbe9c303d5e930f5be3b5f4353c3b02296fc",
+      "filename": "2026q2_nport.zip",
+      "bytes": 440699889,
+      "loaded_at": "2026-10-26T05:36:31.496751+00:00"
+    },
+    {
+      "archive_id": "2f5ee059234d2e28f16d0451d9fcb405aab3dad5d92cded74c8ea9ffc4b66c38",
+      "filename": "2026q3_nport.zip",
+      "bytes": 462371568,
+      "loaded_at": "2026-10-26T05:42:02.525900+00:00"
+    }
+  ],
+  "availability_lag_days": 60,
+  "availability_overrides_sha256": null,
+  "quality": {
+    "status": "REVIEW_REQUIRED",
+    "checks": {
+      "numeric_or_date_parse_issues": 0,
+      "no_match_funds": 0,
+      "cik_mismatches": 0,
+      "accessions_in_multiple_archives": 0,
+      "amended_or_repeated_report_dates": 20,
+      "duplicate_class_month_latest": 27,
+      "duplicate_flow_month_latest": 6,
+      "balance_sheet_discrepancies": 0,
+      "snapshots_without_holdings": 0,
+      "missing_expected_tables": 0,
+      "ambiguous_debt_rows": 0,
+      "usd_sensitivity_magnitude_above_10_years": 13,
+      "unknown_metadata_types": 0
+    },
+    "missing_expected_tables": [],
+    "notes": [
+      "A coverage gap is not proof of missing SEC data; check fund inception, fiscal calendar, mergers and ZIP coverage.",
+      "Latest views are retrospective. For prediction use filings available by each decision date; default availability is an unverified lag proxy.",
+      "Weights are diagnostic, not forced to 100%; cash, liabilities, derivatives and unreported positions can prevent reconciliation.",
+      "Normalized risk fields retain the filed sign. Validate sign conventions before interpreting economic duration or comparing active signed risk across filers.",
+      "Review inventory for missing optional tables. A missing value is not zero.",
+      "Do not aggregate class returns or sum dollar flows after joining flows to multiple classes."
+    ]
+  }
+}

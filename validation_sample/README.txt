@@ -1,0 +1,1 @@
+REAL TEST DATA ONLY: 2019 Q4 and 2026 Q1 SEC release ZIPs. These are not consecutive observations or the complete sample. ZIP dates are filing-batch dates, not report dates. No synthetic fixture rows are included here. Run the extractor over all desired ZIPs to create production output/.

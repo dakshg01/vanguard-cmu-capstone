@@ -1,0 +1,60 @@
+﻿group,role,style,fund_name,manager,series_id,cik,ncen_is_index,ncen_is_etf,nport_var_reference_index,prospectus_benchmark_to_verify,note,report_count,first_report_date,last_report_date,first_filing_date,last_filing_date,coverage_status
+PRIMARY,COMPETITOR,Core,Western Asset Core Bond Fund,Franklin/Western,S000000713,0000863520,N,N,Bloomberg US Aggregate,,,2,2019-09-30,2025-12-31,2019-11-27,2026-02-23,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Western Asset Core Plus Bond Fund,Franklin/Western,S000000714,0000863520,N,N,Bloomberg US Aggregate,,,2,2019-09-30,2025-12-31,2019-11-27,2026-02-23,OBSERVED
+PRIMARY,COMPETITOR,Core,Baird Aggregate Bond Fund,Baird,S000000753,0001282693,N,N,N/A,,,2,2019-09-30,2025-12-31,2019-11-27,2026-02-17,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Baird Core Plus Bond Fund,Baird,S000000754,0001282693,N,N,N/A,,,2,2019-09-30,2025-12-31,2019-11-27,2026-02-17,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,TCW MetWest Total Return Bond Fund,TCW,S000001147,0001028621,N,N,Bloomberg U.S. Aggregate Bond Index,,,2,2019-09-30,2025-12-31,2019-11-19,2026-02-26,OBSERVED
+PRIMARY,COMPETITOR,Core,T. Rowe Price New Income Fund,T. Rowe Price,S000002136,0000080249,N,N,Bloomberg Barclays US Agg Total Return Value Unhedged USD (Returns),,,1,2025-11-30,2025-11-30,2026-01-27,2026-01-27,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,MFS Total Return Bond Fund,MFS,S000002497,0000063075,N,N,BBG Barc US Aggregate Index,,,2,2019-10-31,2026-01-31,2019-12-23,2026-03-25,OBSERVED
+BENCHMARK,BENCHMARK,Bloomberg US Aggregate Float Adjusted,Vanguard Total Bond Market Index Fund,Vanguard,S000002564,0000794105,Y,Y,,,,2,2019-09-30,2025-12-31,2019-11-29,2026-02-26,OBSERVED
+ADJACENT,VANGUARD,Core,Vanguard Interm-Term Investment-Grade Fund,Vanguard,S000002586,0000106444,N,N,Bloomberg U.S. 5-10 Year Credit Bond Index,,Corporate-heavy (IG spread duration 5.4y); not core,2,2019-10-31,2026-01-31,2019-12-27,2026-03-31,OBSERVED
+PRIMARY,COMPETITOR,Core,JPMorgan Core Bond Fund,JPMorgan,S000003477,0000763852,N,N,N/A,,,1,2025-11-30,2025-11-30,2026-01-28,2026-01-28,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,JPMorgan Core Plus Bond Fund,JPMorgan,S000003478,0000763852,N,N,U.S. Aggregate,,,1,2025-11-30,2025-11-30,2026-01-28,2026-01-28,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Sterling Capital Total Return Bond Fund,Sterling Capital,S000003549,0000889284,N,N,,,,2,2019-09-30,2025-12-31,2019-11-19,2026-02-27,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Hartford Total Return Bond Fund,Hartford,S000003605,0001006415,N,N,Barclays US Aggregate,,,2,2019-10-31,2026-01-31,2019-12-27,2026-03-25,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,BlackRock Total Return Fund,BlackRock,S000004071,0000276463,N,N,Fund`s Designated Reference Portfolio is the Fund`s Securities Portfolio,,,2,2019-09-30,2025-12-31,2019-11-26,2026-02-26,OBSERVED
+BENCHMARK,BENCHMARK,Bloomberg US Aggregate,iShares Core U.S. Aggregate Bond ETF,BlackRock,S000004362,0001100663,Y,Y,,,,1,2025-11-30,2025-11-30,2026-01-23,2026-01-23,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,PGIM Total Return Bond Fund,PGIM,S000004536,0000929523,N,N,PGIM Total Return Bond Fund_Ex Derivatives BM,,,2,2019-10-31,2026-01-30,2019-12-23,2026-03-30,OBSERVED
+PRIMARY,COMPETITOR,Core,PGIM Core Bond Fund,PGIM,S000004691,0000890339,N,N,PGIM Core Bond Fund_Ex Derivatives BM,,,2,2019-10-31,2026-01-30,2019-12-26,2026-03-31,OBSERVED
+PRIMARY,COMPETITOR,Core,Nuveen Core Bond Fund,Nuveen,S000005372,0001084380,N,N,Bloomberg US Aggregate,,,2,2019-09-30,2025-12-31,2019-11-26,2026-02-26,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Loomis Sayles Core Plus Bond Fund,Loomis Sayles,S000006660,0000770540,N,N,Fund's Securities Portfolio,,,2,2019-09-30,2025-12-31,2019-11-27,2026-02-26,OBSERVED
+PRIMARY,COMPETITOR,Core,Loomis Sayles Investment Grade Bond Fund,Loomis Sayles,S000006701,0000872649,N,N,Fund's Securities Portfolio,,,2,2019-09-30,2025-12-31,2019-11-27,2026-02-26,OBSERVED
+PRIMARY,COMPETITOR,Core,Fidelity Investment Grade Bond Fund,Fidelity,S000007004,0000035315,N,N,Bloomberg US Aggregate Bond Index,,,1,2025-11-30,2025-11-30,2026-01-23,2026-01-23,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Fidelity Total Bond Fund,Fidelity,S000007066,0000751199,N,N,Bloomberg US Aggregate Bond Index,,,1,2025-11-30,2025-11-30,2026-01-23,2026-01-23,OBSERVED
+PRIMARY,COMPETITOR,Core,Lord Abbett Core Fixed Income Fund,Lord Abbett,S000007277,0000911507,N,N,Barc Capital US Corp Inv Grade,,,1,2025-11-30,2025-11-30,2026-01-22,2026-01-22,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Allspring Core Plus Bond Fund,Allspring,S000007418,0001081400,N,N,Bloomberg U.S. Aggregate Index,,,1,2025-11-30,2025-11-30,2026-01-23,2026-01-23,OBSERVED
+PRIMARY,COMPETITOR,Core,Neuberger Berman Core Bond Fund,Neuberger Berman,S000007835,0000723620,N,N,Barclays US Aggregate,,,2,2019-10-31,2026-01-31,2019-12-18,2026-03-24,OBSERVED
+PRIMARY,COMPETITOR,Core,Voya Intermediate Bond Fund,Voya,S000008396,0001066602,N,N,BBG U.S. Aggregate Index,,,2,2019-09-30,2025-12-31,2019-11-19,2026-02-26,OBSERVED
+PRIMARY,COMPETITOR,Core,Bond Fund of America,Capital Group,S000009231,0000013075,N,N,Bloomberg U.S. Aggregate Index,,,2,2019-09-30,2025-12-31,2019-11-27,2026-02-26,OBSERVED
+ADJACENT,COMPETITOR,Core,Intermediate Bond Fund of America,Capital Group,S000009236,0000826813,N,N,Bloomberg U.S. Aggregate Index,,Duration 3.8y; short-intermediate rather than core,1,2025-11-30,2025-11-30,2026-01-29,2026-01-29,OBSERVED
+PRIMARY,COMPETITOR,Core,Goldman Sachs Core Fixed Income Fund,Goldman Sachs,S000009306,0000822977,N,N,Bloomberg Barclays U.S. Aggregate Bond Index,,,2,2019-09-30,2025-12-31,2019-11-21,2026-02-23,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,PIMCO Total Return Fund,PIMCO,S000009707,0000810893,N,N,Bloomberg US Aggregate Total Return Unhedged USD Index,,,2,2019-09-30,2025-12-31,2019-11-22,2026-03-02,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Federated Hermes Total Return Bond Fund,Federated Hermes,S000010897,0000912763,N,N,Barclays US Universal,,,1,2025-11-30,2025-11-30,2026-01-23,2026-01-23,OBSERVED
+PRIMARY,COMPETITOR,Core,Dodge & Cox Income Fund,Dodge & Cox,S000011205,0000029440,N,N,Securities Portfolio,,,2,2019-09-30,2025-12-31,2019-11-27,2026-02-27,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Columbia Total Return Bond Fund,Columbia,S000012097,0000773757,N,N,BBG U.S. Aggregate Index,,,2,2019-10-31,2026-01-31,2019-12-26,2026-03-27,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Nuveen Core Plus Bond Fund,Nuveen,S000012198,0001084380,N,N,Bloomberg US Aggregate,,,2,2019-09-30,2025-12-31,2019-11-26,2026-02-26,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Victory Core Plus Intermediate Bond Fund,Victory,S000012902,0000908695,N,N,,,,2,2019-10-31,2026-01-31,2019-12-30,2026-03-27,OBSERVED
+ADJACENT,COMPETITOR,Multisector,PIMCO Income Fund,PIMCO,S000016548,0000810893,N,N,,,"Multisector, not core or core-plus",2,2019-09-30,2025-12-31,2019-11-22,2026-03-02,OBSERVED
+BENCHMARK,BENCHMARK,Bloomberg US Aggregate (alt),SPDR Portfolio Aggregate Bond ETF,State Street,S000017334,0001064642,Y,Y,,,,2,2019-09-30,2025-12-31,2019-11-27,2026-02-26,OBSERVED
+PRIMARY,COMPETITOR,Core,Putnam Core Bond Fund,Putnam/Franklin,S000024275,0001005942,N,N,LBUSTRUU Index,,,2,2019-10-31,2026-01-31,2019-12-18,2026-03-27,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Invesco Core Plus Bond Fund,Invesco,S000025657,0001112996,N,N,Bloomberg Barclays US Aggregate Bond Index,,,1,2025-11-30,2025-11-30,2026-01-29,2026-01-29,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Eaton Vance Total Return Bond Fund,Morgan Stanley,S000026932,0000745463,N,N,Securities Portfolio,,,2,2019-09-30,2025-12-31,2019-11-21,2026-02-27,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,DoubleLine Total Return Bond Fund,DoubleLine,S000028163,0001480207,N,N,Bloomberg Barclays US Aggregate Bond Index Unhedged USD,,,2,2019-09-30,2025-12-31,2019-11-25,2026-02-26,OBSERVED
+PRIMARY,COMPETITOR,Core,DoubleLine Core Fixed Income Fund,DoubleLine,S000028164,0001480207,N,N,Bloomberg Barclays US Aggregate Bond Index Unhedged USD,,,2,2019-09-30,2025-12-31,2019-11-25,2026-02-26,OBSERVED
+PRIMARY,COMPETITOR,Core,DFA Investment Grade Portfolio,Dimensional,S000031490,0000355437,N,N,Securities Portfolio VaR,,,2,2019-10-31,2026-01-31,2019-12-20,2026-03-27,OBSERVED
+BENCHMARK,BENCHMARK,Bloomberg US Aggregate (alt),Schwab U.S. Aggregate Bond ETF,Schwab,S000033156,0001454889,Y,Y,,,,2,2019-09-30,2025-12-31,2019-11-26,2026-02-24,OBSERVED
+PRIMARY,COMPETITOR,Core,Bridge Builder Core Bond Fund,Edward Jones,S000040853,0001567101,N,N,Bloomberg Barclays U.S. Aggregate (Returns Universe),,,2,2019-09-30,2025-12-31,2019-11-25,2026-02-23,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Guggenheim Total Return Bond Fund,Guggenheim,S000043991,0000088525,N,N,Portfolio (ExDerivative),,,2,2019-09-30,2025-12-31,2019-11-27,2026-03-02,OBSERVED
+ADJACENT,VANGUARD,Core,Vanguard Institutional Interm-Term Bond Fund,Vanguard,S000049658,0000836906,N,N,Bloomberg U.S. Intermediate Aggregate Excluding Baa,,Duration 3.7y; short-intermediate rather than core,2,2019-09-30,2025-12-31,2019-11-29,2026-02-26,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Bridge Builder Core Plus Bond Fund,Edward Jones,S000049701,0001567101,N,N,"Core Plus Bond Guideline Benchmark (75%US Agg, 25%US HY 2% Issuer Cap)",,,2,2019-09-30,2025-12-31,2019-11-25,2026-02-23,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Lord Abbett Core Plus Bond Fund,Lord Abbett,S000051773,0000911507,N,N,Barc Capital US Corp Inv Grade,,,1,2025-11-30,2025-11-30,2026-01-22,2026-01-22,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,American Funds Strategic Bond Fund,Capital Group,S000052313,0001655146,N,N,Bloomberg U.S. Aggregate Index,,,2,2019-09-30,2025-12-31,2019-11-27,2026-02-26,OBSERVED
+PRIMARY,VANGUARD,Core,Vanguard Core Bond Fund,Vanguard,S000053068,0000836906,N,N,Bloomberg U.S. Aggregate Float Adjusted Index,,,2,2019-09-30,2025-12-31,2019-11-29,2026-02-26,OBSERVED
+PRIMARY,COMPETITOR,Core,Diamond Hill Core Bond Fund,Diamond Hill,S000055044,0001032423,N,N,,,,2,2019-09-30,2025-12-31,2019-11-29,2026-03-02,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,Carillon Reams Core Plus Bond Fund,Carillon,S000058960,0000897111,N,N,Bloomberg US Agg Total Return Value Unhedged USD,,,2,2019-10-31,2025-12-31,2019-12-20,2026-02-27,OBSERVED
+PRIMARY,COMPETITOR,Core-Plus,BNY Mellon Core Plus Fund,BNY Mellon,S000059721,0001635295,N,N,Bloomberg U.S. Aggregate Bond Index,,,2,2019-10-31,2026-01-31,2019-12-20,2026-03-25,OBSERVED
+PRIMARY,COMPETITOR,Core,Harbor Core Bond Fund,Harbor,S000061981,0000793769,N,N,,,,2,2019-10-31,2026-01-31,2019-12-23,2026-03-30,OBSERVED
+PRIMARY,VANGUARD,Core-Plus,Vanguard Core-Plus Bond Fund,Vanguard,S000073843,0000836906,N,N,Bloomberg U.S. Universal Bond Index,,,1,2025-12-31,2025-12-31,2026-02-26,2026-02-26,OBSERVED
+CHECK,VANGUARD,Core,Vanguard Core Bond ETF,Vanguard,S000083197,0000836906,N,Y,Bloomberg U.S. Aggregate Float Adjusted Index,,"Active ETF, near clone of Core Bond Fund; use for cross-check only",1,2025-12-31,2025-12-31,2026-02-26,2026-02-26,OBSERVED
+CHECK,VANGUARD,Core-Plus,Vanguard Core-Plus Bond ETF,Vanguard,S000083198,0000836906,N,Y,Bloomberg U.S. Universal Bond Index,,"Active ETF, near clone of Core-Plus Bond Fund; use for cross-check only",1,2025-12-31,2025-12-31,2026-02-26,2026-02-26,OBSERVED
+PRIMARY,VANGUARD,Core-Plus,Vanguard STAR Core-Plus Bond Fund,Vanguard,S000090502,0000736054,N,N,Bloomberg U.S. Universal Bond Index,,,1,2026-01-31,2026-01-31,2026-03-31,2026-03-31,OBSERVED

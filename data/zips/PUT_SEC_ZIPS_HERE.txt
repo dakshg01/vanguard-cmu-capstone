@@ -1,0 +1,4 @@
+Download the SEC Form N-PORT quarterly ZIPs and put them here, without unzipping.
+Start with 2019 Q4, then add quarters through your chosen collection cutoff.
+https://www.sec.gov/data-research/sec-markets-data/form-n-port-data-sets
+ZIP quarter is a filing/dissemination batch, not a holdings/report quarter.
