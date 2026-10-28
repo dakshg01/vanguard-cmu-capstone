@@ -1,0 +1,27 @@
+         series_id      first       last  n_obs  covers_2019    source
+        BAMLC0A0CM 2023-10-27 2026-10-23    783        False fredgraph
+      BAMLC0A1CAAA 2023-10-27 2026-10-23    784        False fredgraph
+       BAMLC0A2CAA 2023-10-27 2026-10-23    784        False fredgraph
+        BAMLC0A3CA 2023-10-27 2026-10-23    784        False fredgraph
+      BAMLC0A4CBBB 2023-10-27 2026-10-23    784        False fredgraph
+      BAMLC1A0C13Y 2023-10-27 2026-10-23    784        False fredgraph
+      BAMLC2A0C35Y 2023-10-27 2026-10-23    784        False fredgraph
+      BAMLC3A0C57Y 2023-10-27 2026-10-23    784        False fredgraph
+     BAMLC4A0C710Y 2023-10-27 2026-10-23    784        False fredgraph
+    BAMLC7A0C1015Y 2023-10-27 2026-10-23    784        False fredgraph
+     BAMLC8A0C15PY 2023-10-27 2026-10-23    784        False fredgraph
+      BAMLH0A0HYM2 2023-10-27 2026-10-23    784        False fredgraph
+      BAMLH0A1HYBB 2023-10-27 2026-10-23    784        False fredgraph
+       BAMLH0A2HYB 2023-10-27 2026-10-23    784        False fredgraph
+       BAMLH0A3HYC 2023-10-27 2026-10-23    784        False fredgraph
+     BAMLEMCBPIOAS 2023-10-27 2026-10-23    784        False fredgraph
+      BAMLC0A0CMEY 2023-10-27 2026-10-23    783        False fredgraph
+    BAMLH0A0HYM2EY 2023-10-27 2026-10-23    784        False fredgraph
+   BAMLCC0A0CMTRIV 2023-10-27 2026-10-23    784        False fredgraph
+BAMLHYH0A0HYM2TRIV 2023-10-27 2026-10-23    784        False fredgraph
+            BAA10Y 2019-01-02 2026-10-23   1950         True fredgraph
+            AAA10Y 2019-01-02 2026-10-23   1950         True fredgraph
+              DBAA 2019-01-02 2026-10-23   1952         True fredgraph
+              DAAA 2019-01-02 2026-10-23   1952         True fredgraph
+
+Series that do NOT reach back to 2019: BAMLC0A0CM, BAMLC0A1CAAA, BAMLC0A2CAA, BAMLC0A3CA, BAMLC0A4CBBB, BAMLC1A0C13Y, BAMLC2A0C35Y, BAMLC3A0C57Y, BAMLC4A0C710Y, BAMLC7A0C1015Y, BAMLC8A0C15PY, BAMLH0A0HYM2, BAMLH0A1HYBB, BAMLH0A2HYB, BAMLH0A3HYC, BAMLEMCBPIOAS, BAMLC0A0CMEY, BAMLH0A0HYM2EY, BAMLCC0A0CMTRIV, BAMLHYH0A0HYM2TRIV

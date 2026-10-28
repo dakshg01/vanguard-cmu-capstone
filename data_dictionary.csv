@@ -1,0 +1,25 @@
+series_id,group,description,units,first,last,n_obs,covers_2019,source,fred_url
+BAMLC0A0CM,IG OAS,ICE BofA US Corporate (IG) OAS,% (spread),2023-10-27,2026-10-23,783,False,fredgraph,https://fred.stlouisfed.org/series/BAMLC0A0CM
+BAMLC0A1CAAA,IG OAS by rating,ICE BofA AAA US Corporate OAS,% (spread),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLC0A1CAAA
+BAMLC0A2CAA,IG OAS by rating,ICE BofA AA US Corporate OAS,% (spread),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLC0A2CAA
+BAMLC0A3CA,IG OAS by rating,ICE BofA Single-A US Corporate OAS,% (spread),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLC0A3CA
+BAMLC0A4CBBB,IG OAS by rating,ICE BofA BBB US Corporate OAS,% (spread),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLC0A4CBBB
+BAMLC1A0C13Y,IG OAS by maturity,ICE BofA 1-3Y US Corporate OAS,% (spread),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLC1A0C13Y
+BAMLC2A0C35Y,IG OAS by maturity,ICE BofA 3-5Y US Corporate OAS,% (spread),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLC2A0C35Y
+BAMLC3A0C57Y,IG OAS by maturity,ICE BofA 5-7Y US Corporate OAS,% (spread),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLC3A0C57Y
+BAMLC4A0C710Y,IG OAS by maturity,ICE BofA 7-10Y US Corporate OAS,% (spread),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLC4A0C710Y
+BAMLC7A0C1015Y,IG OAS by maturity,ICE BofA 10-15Y US Corporate OAS,% (spread),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLC7A0C1015Y
+BAMLC8A0C15PY,IG OAS by maturity,ICE BofA 15+Y US Corporate OAS,% (spread),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLC8A0C15PY
+BAMLH0A0HYM2,HY OAS,ICE BofA US High Yield OAS,% (spread),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLH0A0HYM2
+BAMLH0A1HYBB,HY OAS by rating,ICE BofA BB US High Yield OAS,% (spread),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLH0A1HYBB
+BAMLH0A2HYB,HY OAS by rating,ICE BofA Single-B US High Yield OAS,% (spread),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLH0A2HYB
+BAMLH0A3HYC,HY OAS by rating,ICE BofA CCC & Lower US High Yield OAS,% (spread),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLH0A3HYC
+BAMLEMCBPIOAS,EM OAS,ICE BofA EM Corporate Plus OAS,% (spread),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLEMCBPIOAS
+BAMLC0A0CMEY,Yields,ICE BofA US Corporate effective yield,% (yield),2023-10-27,2026-10-23,783,False,fredgraph,https://fred.stlouisfed.org/series/BAMLC0A0CMEY
+BAMLH0A0HYM2EY,Yields,ICE BofA US High Yield effective yield,% (yield),2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLH0A0HYM2EY
+BAMLCC0A0CMTRIV,Total return,ICE BofA US Corporate total return index,index level,2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLCC0A0CMTRIV
+BAMLHYH0A0HYM2TRIV,Total return,ICE BofA US High Yield total return index,index level,2023-10-27,2026-10-23,784,False,fredgraph,https://fred.stlouisfed.org/series/BAMLHYH0A0HYM2TRIV
+BAA10Y,Moody's spreads,Moody's Baa yield minus 10Y Treasury,% (spread),2019-01-02,2026-10-23,1950,True,fredgraph,https://fred.stlouisfed.org/series/BAA10Y
+AAA10Y,Moody's spreads,Moody's Aaa yield minus 10Y Treasury,% (spread),2019-01-02,2026-10-23,1950,True,fredgraph,https://fred.stlouisfed.org/series/AAA10Y
+DBAA,Moody's yields,Moody's seasoned Baa corporate yield,% (yield),2019-01-02,2026-10-23,1952,True,fredgraph,https://fred.stlouisfed.org/series/DBAA
+DAAA,Moody's yields,Moody's seasoned Aaa corporate yield,% (yield),2019-01-02,2026-10-23,1952,True,fredgraph,https://fred.stlouisfed.org/series/DAAA
