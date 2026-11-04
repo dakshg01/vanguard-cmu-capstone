@@ -1,0 +1,162 @@
+name: Export N-PORT bond IDs for Bloomberg
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Check out capstone repository
+        uses: actions/checkout@v4
+
+      - name: Check free disk space
+        run: df -h .
+
+      - name: Restore released SQLite database
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python database_release.py download
+
+      - name: Write bond identifier extraction program
+        shell: bash
+        run: |
+          cat > build_bloomberg_rating_universe.py <<'PYCODE'
+          #!/usr/bin/env python3
+          """Create SEC N-PORT -> Bloomberg bond-rating inputs from capstone SQLite.
+          
+          Run from the repository root after restoring output/nport.sqlite:
+           python build_bloomberg_rating_universe.py --db output/nport.sqlite
+          Uses Python's standard library only. Does not request Bloomberg data.
+          """
+          import argparse, csv, json, re, sqlite3
+          from collections import Counter
+          from datetime import datetime
+          from pathlib import Path
+          
+          CUSIP_RE = re.compile(r'^[0-9A-Z*@#]{9}$')
+          ISIN_RE = re.compile(r'^[A-Z]{2}[0-9A-Z]{9}[0-9]$')
+          
+          def write_csv(path, cols, rows):
+              with open(path, 'w', newline='', encoding='utf-8-sig') as f:
+                  w=csv.writer(f); w.writerow(cols)
+                  for row in rows: w.writerow(row)
+          
+          def main():
+              p=argparse.ArgumentParser()
+              p.add_argument('--db',default='output/nport.sqlite')
+              p.add_argument('--out',default='output/bloomberg_ratings')
+              p.add_argument('--start',default='2019-01-01')
+              p.add_argument('--end',default='2026-10-31')
+              a=p.parse_args()
+              db=Path(a.db)
+              if not db.is_file(): raise SystemExit(f'Database missing: {db}. Restore via python database_release.py download (see README).')
+              out=Path(a.out);out.mkdir(parents=True,exist_ok=True)
+              conn=sqlite3.connect(f'file:{db.resolve()}?mode=ro',uri=True)
+              conn.row_factory=sqlite3.Row
+              required={'holdings_latest','identifiers_latest'}
+              existing={r[0] for r in conn.execute("SELECT name FROM sqlite_master WHERE type IN ('table','view')")}
+              if not required.issubset(existing): raise SystemExit(f'Missing views: {required-existing}')
+              scratch=sqlite3.connect(out/'rating_index.sqlite')
+              scratch.execute('PRAGMA journal_mode=WAL')
+              scratch.executescript('''
+              CREATE TABLE IF NOT EXISTS exposures (
+                id_kind TEXT NOT NULL, id TEXT NOT NULL, series_id TEXT NOT NULL,
+                report_date TEXT NOT NULL, issuer_name TEXT,
+                asset_cat TEXT, issuer_type TEXT, currency_code TEXT,
+                positions INTEGER NOT NULL DEFAULT 0, reported_weight_sum REAL NOT NULL DEFAULT 0,
+                PRIMARY KEY(id_kind,id,series_id,report_date)
+              );
+              CREATE TABLE IF NOT EXISTS missing (
+                series_id TEXT, report_date TEXT, issuer_name TEXT, issuer_cusip TEXT,
+                position_id TEXT, reason TEXT, PRIMARY KEY(series_id,report_date,position_id)
+              );
+              ''')
+              # Only direct corporate bonds for Qiang's IG/HY and quality factor.
+              q='''SELECT series_id,report_date,HOLDING_ID,ISSUER_NAME,ISSUER_CUSIP,
+                          ASSET_CAT,ISSUER_TYPE,CURRENCY_CODE,COALESCE(weight_fraction,0) AS weight
+                   FROM holdings_latest
+                   WHERE report_date BETWEEN ? AND ?
+                     AND ASSET_CAT='DBT' AND ISSUER_TYPE='CORP'
+                     AND (DERIVATIVE_CAT IS NULL OR TRIM(DERIVATIVE_CAT)='')'''
+              counts=Counter(); no_cusip=[]
+              cur=conn.execute(q,(a.start,a.end));batch=[]
+              for r in cur:
+                  counts['corporate_positions']+=1
+                  raw=(r['ISSUER_CUSIP'] or '').strip().upper()
+                  if CUSIP_RE.fullmatch(raw) and raw!='000000000':
+                      batch.append(('CUSIP',raw,r['series_id'],r['report_date'],r['ISSUER_NAME'],r['ASSET_CAT'],r['ISSUER_TYPE'],r['CURRENCY_CODE'],1,r['weight']))
+                      counts['cusip_positions']+=1
+                  else:
+                      no_cusip.append((r['series_id'],r['report_date'],r['HOLDING_ID'],r['ISSUER_NAME'],raw))
+                      counts['missing_cusip_positions']+=1
+                  if len(batch)>=20000:
+                      scratch.executemany('''INSERT INTO exposures VALUES (?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id_kind,id,series_id,report_date)
+                          DO UPDATE SET positions=positions+excluded.positions,
+                          reported_weight_sum=reported_weight_sum+excluded.reported_weight_sum''',batch)
+                      scratch.commit();batch=[]
+              if batch:
+                  scratch.executemany('''INSERT INTO exposures VALUES (?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id_kind,id,series_id,report_date)
+                    DO UPDATE SET positions=positions+excluded.positions,
+                    reported_weight_sum=reported_weight_sum+excluded.reported_weight_sum''',batch)
+                  scratch.commit()
+              # Fall back to N-PORT ISIN only for holdings without a valid CUSIP. Avoid
+              # silently making arbitrary 1:N mappings if more than one ISIN is present.
+              if no_cusip:
+                  iq='''SELECT DISTINCT TRIM(IDENTIFIER_ISIN) AS isin FROM identifiers_latest
+                        WHERE series_id=? AND report_date=? AND HOLDING_ID=?
+                          AND IDENTIFIER_ISIN IS NOT NULL'''
+                  # Group fallback records by position, even if the source has multiple identifier rows.
+                  for series,date,holding,issuer,raw in no_cusip:
+                      found=sorted({x['isin'].upper() for x in conn.execute(iq,(series,date,holding)) if x['isin'] and ISIN_RE.fullmatch(x['isin'].upper())})
+                      if len(found)==1:
+                          scratch.execute('''INSERT INTO exposures VALUES (?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id_kind,id,series_id,report_date)
+                           DO UPDATE SET positions=positions+1''',('ISIN',found[0],series,date,issuer,'DBT','CORP',None,1,0.0))
+                          counts['isin_fallback_positions']+=1
+                      else:
+                          scratch.execute('INSERT OR REPLACE INTO missing VALUES (?,?,?,?,?,?)',(series,date,issuer,raw,holding,'Multiple ISINs' if len(found)>1 else 'No valid CUSIP/ISIN'))
+                          counts['unmapped_positions']+=1
+                  scratch.commit()
+              # One Bloomberg lookup per distinct bond. Do not make current ratings stand in for historical.
+              master_rows=scratch.execute('''SELECT id_kind,id,MIN(report_date),MAX(report_date),COUNT(DISTINCT series_id),COUNT(DISTINCT report_date),SUM(positions)
+                FROM exposures GROUP BY id_kind,id ORDER BY id_kind,id''')
+              write_csv(out/'01_bbg_security_master.csv',
+                ['id_kind','security_id','first_report_date','last_report_date','fund_count','report_date_count','position_count'],master_rows)
+              obs_rows=scratch.execute('''SELECT e.id_kind,e.id,e.series_id,e.report_date,e.issuer_name,
+                e.positions,e.reported_weight_sum FROM exposures e ORDER BY e.id_kind,e.id,e.report_date,e.series_id''')
+              write_csv(out/'02_holding_rating_join.csv',
+                ['id_kind','security_id','series_id','report_date','issuer_name','positions','reported_weight_fraction_sum'],obs_rows)
+              qrows=scratch.execute('''SELECT id_kind,id,report_date FROM exposures GROUP BY id_kind,id,report_date ORDER BY id_kind,id,report_date''')
+              write_csv(out/'03_point_in_time_rating_requests.csv',
+                ['id_kind','security_id','rating_asof_date'],qrows)
+              missing_rows=scratch.execute('SELECT * FROM missing ORDER BY report_date,series_id')
+              write_csv(out/'04_identifier_exceptions.csv',
+                ['series_id','report_date','issuer_name','issuer_cusip','position_id','reason'],missing_rows)
+              counts['unique_bonds']=scratch.execute('SELECT COUNT(*) FROM (SELECT 1 FROM exposures GROUP BY id_kind,id)').fetchone()[0]
+              counts['distinct_bond_dates']=scratch.execute('SELECT COUNT(*) FROM (SELECT 1 FROM exposures GROUP BY id_kind,id,report_date)').fetchone()[0]
+              counts['funds']=scratch.execute('SELECT COUNT(DISTINCT series_id) FROM exposures').fetchone()[0]
+              (out/'manifest.json').write_text(json.dumps({'source_database':str(db),'start':a.start,'end':a.end,'scope':'Corporate direct debt only (DBT/CORP); excludes derivatives and securitized debt','counts':dict(counts),'generated_utc':datetime.utcnow().isoformat()+'Z','warning':'Bloomberg history availability must be verified; never apply current ratings retroactively.'},indent=2),encoding='utf-8')
+              scratch.close();conn.close()
+              print('Created outputs in',out,'\n',json.dumps(dict(counts),indent=2))
+          if __name__=='__main__':main()
+          PYCODE
+
+      - name: Extract Bloomberg security identifiers and as-of dates
+        run: python build_bloomberg_rating_universe.py --db output/nport.sqlite --out output/bloomberg_ratings --start 2019-01-01 --end 2026-10-31
+
+      - name: Show extraction counts
+        run: cat output/bloomberg_ratings/manifest.json
+
+      - name: Upload Bloomberg-ready CSVs
+        uses: actions/upload-artifact@v4
+        with:
+          name: bloomberg-ratings-export
+          path: |
+            output/bloomberg_ratings/*.csv
+            output/bloomberg_ratings/manifest.json
+          compression-level: 6
+          retention-days: 7
